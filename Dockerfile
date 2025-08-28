@@ -38,7 +38,6 @@ RUN apt-get update && apt-get install -y \
     net-tools \
     procps \
     git \
-    python3-numpy \
     fontconfig \
     fonts-dejavu \
     fonts-dejavu-core \
