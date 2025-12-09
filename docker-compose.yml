@@ -45,7 +45,7 @@ services:
 
       # Browser Settings
       - BROWSER_PATH=
-      - BROWSER_USER_DATA=
+      - BROWSER_USER_DATA=/app/data/chrome_data
       - BROWSER_DEBUGGING_PORT=${BROWSER_DEBUGGING_PORT:-9222}
       - BROWSER_DEBUGGING_HOST=localhost
       - USE_OWN_BROWSER=false
@@ -66,6 +66,7 @@ services:
 
     volumes:
       - /tmp/.X11-unix:/tmp/.X11-unix
+      - browser_data:/app/data/chrome_data
       # - ./my_chrome_data:/app/data/chrome_data # Optional: persist browser data
     restart: unless-stopped
     shm_size: "2gb"
